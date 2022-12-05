@@ -24,3 +24,7 @@ Host forward_greenstick
 ```
 
 Use *forward_greenstick* when you login in VSCode. Note tha you are connecting to *cactus* from which is tunnel to *geenstick*.
+
+### Video on JuputerHub, SSH and MoFEM
+
+[![](https://markdown-videos.deta/youtube/xL3J8VHig68)](https://youtu.be/xL3J8VHig68)
