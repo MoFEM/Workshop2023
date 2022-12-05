@@ -27,4 +27,5 @@ Use *forward_greenstick* when you login in VSCode. Note tha you are connecting t
 
 ### Video on JuputerHub, SSH and MoFEM
 
-[![](https://markdown-videos.deta/youtube/xL3J8VHig68)](https://youtu.be/xL3J8VHig68)
+[![Watch the video](https://img.youtube.com/vi/xL3J8VHig68/hqdefault.jpg)](https://youtu.be/xL3J8VHig68)
+
