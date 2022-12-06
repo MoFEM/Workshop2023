@@ -1,5 +1,9 @@
 # Greenstick
 
+### News about Greenstick
+
+Sorry, no news, yet.
+
 ### Password and login
 
 - On the first login, select the password
