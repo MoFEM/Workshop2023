@@ -13,7 +13,7 @@ ln -s ~/install_from_source.md
 - On the first login, select the password
 - The shell password on the SSH login is different than the JupyterHub password
 - Ask admin for SSH password
-- Change password in the shell using [passwd](https://www.computerhope.com/unix/upasswor.htm){:target="_blank" rel="noopener"} command
+- Change password in the shell using [passwd](https://man7.org/linux/man-pages/man1/passwd.1.html){:target="_blank" rel="noopener"} command
 - Set up your shell with the command (e.g. bash):
 ~~~~
 $ usermod --shell /bin/bash your_login_name
