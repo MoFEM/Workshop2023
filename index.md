@@ -4,7 +4,7 @@
 
 - We can share notebooks, and snipets in directory */common_notebooks*. All of you should have primissions to read and write to it. Execute command to crate link,
 ~~~~
-ln -s ~/install_from_source.md 
+ln -s /common_notebooks $HOME/
 ~~~~
 - Unfortunatly we do not have large hard-drive (for now) on greenstick. Please remove oboslete files, and for large computations use *Buckedhead*.
 
