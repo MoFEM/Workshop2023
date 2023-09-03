@@ -28,7 +28,7 @@ nice -n 10 mpirun -np 2 ./command_line
 $ usermod --shell /bin/bash your_login_name
 ~~~~
 
-### SSH config if you have account on cactus
+### SSH config
 
 Copy the following code into .ssh/config on your laptop or desktop.
 ~~~~
@@ -40,7 +40,7 @@ Host workshop2023
   Port 2222
 ~~~~
 
-Use *workshop2023* when you login in VSCode. Note tha you are connecting to *cactus* from which is tunnel to *geenstick*.
+Use *workshop2023* when you login in VSCode. Note tha you are connecting to *jupyterhub cloud/docker container*.
 
 ### Video on JuputerHub, SSH and MoFEM
 
