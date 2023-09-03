@@ -30,7 +30,7 @@ Host workshop2023
   Port 2222
 ~~~~
 
-Use *forward_greenstick* when you login in VSCode. Note tha you are connecting to *cactus* from which is tunnel to *geenstick*.
+Use *workshop2023* when you login in VSCode. Note tha you are connecting to *cactus* from which is tunnel to *geenstick*.
 
 ### Video on JuputerHub, SSH and MoFEM
 
