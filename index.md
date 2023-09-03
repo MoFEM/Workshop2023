@@ -1,5 +1,7 @@
 # Workshop 2023
 
+![WorkshopLogo2023](figures/WorkshopLogo2023.png)
+
 ### Being good citizen
 
 - If you run somthing with multiprocesses and which will run longer than 5-10 minutes, be nice, i.e. run command as follows
