@@ -1,21 +1,11 @@
-# Greenstick
+# Workshop 2023
 
 ### Being good citizen
 
 - If you run somthing with multiprocesses and which will run longer than 5-10 minutes, be nice, i.e. run command as follows
 ~~~~
-nice -n 10 mpirun -np 4 ./command_line
+nice -n 10 mpirun -np 2 ./command_line
 ~~~~
-
-- If you run longer problems use buckedhead
-
-### News about Greenstick
-
-- We can share notebooks, and snipets in directory */common_notebooks*. All of you should have primissions to read and write to it. Execute command to crate link,
-~~~~
-ln -s /common_notebooks $HOME/
-~~~~
-- Unfortunatly we do not have large hard-drive (for now) on greenstick. Please remove oboslete files, and for large computations use *Buckedhead*.
 
 ### Password and login
 
@@ -32,8 +22,8 @@ $ usermod --shell /bin/bash your_login_name
 
 Copy the following code into .ssh/config on your laptop or desktop.
 ~~~~
-Host forward_greenstick
-  HostName cactus.eng.gla.ac.uk
+Host workshop2023
+  HostName localhost
   ForwardX11 yes
   Compression yes
   User YOUR_LOGIN_ON_HUB
