@@ -1,3 +1,30 @@
+# Docker intallation
+
+You can install Docker following instrution here [link](https://docs.docker.com/engine/install/).
+
+
+If you like just try, after shutdown of the JupyterHub container will be romoved run docker it as follows, 
+~~~~
+docker run --rm --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
+~~~~
+
+If you like to swithc it on for some time, we recommend to run it as a deaom,
+~~~~~
+docker run -d --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
+~~~~~
+In case you run it on the laptop, and you shout it down, you adter reboot you can restart container as follows
+~~~~~
+docker start workshop2023
+~~~~~
+
+If you have run Mac with ARM chip, you have to switch platofrm when you run compiler,
+~~~~~~
+docker run -d --platform linux/amd64 --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
+~~~~~~
+that rensers suboptimal prefromance, however is a workable solution.
+
+In theroy, you can build your docer image from M1 chip, however, we do not test it and at and that time we do not know if all packages will run. However, MoFEM compilation with Spack will work. 
+
 # Workshop 2023
 
 ![WorkshopLogo2023](figures/WorkshopLogo2023.png)
@@ -27,6 +54,7 @@ nice -n 10 mpirun -np 2 ./command_line
 ~~~~
 $ usermod --shell /bin/bash your_login_name
 ~~~~
+You can use other shells, depending of your personal preferences.
 
 ### SSH config
 
