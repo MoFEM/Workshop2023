@@ -1,14 +1,27 @@
 # Docker intallation
 
+## Instsll Docker 
+
 You can install Docker following instrution here [link](https://docs.docker.com/engine/install/).
 
+## Run container
+
+#### Pull image
+
+~~~~
+docker pull likask/mofem-spack-jupyterhub:Workshop2023
+~~~~
+
+#### Run container
 
 If you like just try, after shutdown of the JupyterHub container will be romoved run docker it as follows, 
 ~~~~
 docker run --rm --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~
 
-If you like to swithc it on for some time, we recommend to run it as a deaom,
+#### Run deomon 
+
+If you like to switch it on for some time, we recommend to run it as a deaom,
 ~~~~~
 docker run -d --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~~
@@ -16,6 +29,8 @@ In case you run it on the laptop, and you shout it down, you adter reboot you ca
 ~~~~~
 docker start workshop2023
 ~~~~~
+
+#### M1 chip case on Mac
 
 If you have run Mac with ARM chip, you have to switch platofrm when you run compiler,
 ~~~~~~
