@@ -1,6 +1,6 @@
 # Docker intallation
 
-## Instsll Docker 
+## Docker installation
 
 You can install Docker following instrution here [link](https://docs.docker.com/engine/install/).
 
