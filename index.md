@@ -1,8 +1,8 @@
-# Docker intallation
+# Docker installation
 
 ## Docker installation
 
-You can install Docker following instrution here [link](https://docs.docker.com/engine/install/).
+You can install Docker following instructions here [link](https://docs.docker.com/engine/install/).
 
 ## Run container
 
@@ -14,42 +14,42 @@ docker pull likask/mofem-spack-jupyterhub:Workshop2023
 
 #### Run container
 
-If you like just try, after shutdown of the JupyterHub container will be romoved run docker it as follows, 
+If you like, just try the container that after the shutdown of the JupyterHub container will be removed, run docker it as follows, 
 ~~~~
 docker run --rm --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~
 
-#### Run deomon 
+#### Run demon 
 
-If you like to switch it on for some time, we recommend to run it as a deaom,
+If you would like to switch it on for some time, we recommend running it as a demon,
 ~~~~~
 docker run -d --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~~
-In case you run it on the laptop, and you shout it down, you adter reboot you can restart container as follows
+In case you run it on the laptop and you shout it down, after reboot, you can restart the container as follows.
 ~~~~~
 docker start workshop2023
 ~~~~~
 
 #### M1 chip case on Mac
 
-If you have run Mac with ARM chip, you have to switch platofrm when you run compiler,
+If you have run a Mac with an ARM chip, you have to switch platforms when you run the compiler,
 ~~~~~~
 docker run -d --platform linux/amd64 --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~~~
-that rensers suboptimal prefromance, however is a workable solution.
+That results in suboptimal performance, however, is a workable solution.
 
-In theroy, you can build your docer image from M1 chip, however, we do not test it and at and that time we do not know if all packages will run. However, MoFEM compilation with Spack will work. 
+In theory, you can build your docker image from M1 chip. However, we do not test it and at that time we do not know if all packages will run. However, MoFEM compilation with Spack will work. 
 
 ## Login and starting work
 
-- Login as user "mofem", you set password on fisrt login. Note this is passord to jupyterhub, not password to Linux environment.
-- Before you strat exacute *install.md* notebook. It will craete locl view of genric MoFEM installation which is used by default in example notebooks.
+- Login as user "mofem"; you set a password on the first login. Note this is the password to JupyterHub, not a password to the Linux environment.
+- Before you start, execute *install.md* notebook. It will create a local view of the generic MoFEM installation, which is used by default in example notebooks.
 
-## Being good citizen
+## Being a good citizen
 
-This is a case when container is running on server and you share resources with other users.
+This is a case when the container is running on a server and you share resources with other users.
 
-- If you run somthing with multiprocesses and which will run longer than 5-10 minutes, be nice, i.e. run command as follows
+- If you run something with multiprocess which will run longer than 5-10 minutes, be nice, i.e. run the command as follows
 ~~~~
 nice -n 10 mpirun -np 2 ./command_line
 ~~~~
@@ -58,7 +58,7 @@ nice -n 10 mpirun -np 2 ./command_line
 
 - On the first login, select the password
 - The shell password on the SSH login is different than the JupyterHub password
-- Ask admin for SSH password
+- Ask an admin for SSH password
 - Change password in the shell using [passwd](https://man7.org/linux/man-pages/man1/passwd.1.html){:target="_blank" rel="noopener"} command
 - Set up your shell with the command (e.g. bash):
 ~~~~
@@ -78,7 +78,7 @@ Host workshop2023
   Port 2222
 ~~~~
 
-Use *workshop2023* when you login in VSCode. Note tha you are connecting to *jupyterhub cloud/docker container*.
+Use *workshop2023* when you login thorugh VSCode. Note that you are connecting to *jupyterhub cloud/docker container*.
 
 [![Watch the video](https://img.youtube.com/vi/xL3J8VHig68/hqdefault.jpg)](https://youtu.be/xL3J8VHig68){:target="_blank" rel="noopener"}
 
@@ -90,7 +90,7 @@ Use *workshop2023* when you login in VSCode. Note tha you are connecting to *jup
 
 [Glasgow Computational Engineering Centre](https://www.gla.ac.uk/research/az/gcec/) of the University of Glasgow  is proud to organise the first Autumn School of the [UK Association for Computational Mechanics](https://ukacm.org).
 
-The objective of this online course is to present new advances in mixed finite element formulations in solid mechanics and novel techniques for modelling deformable solids at finite strains. The lectures are focused on both the mechanical and mathematical aspects.  The specific topics of this course include saddle point formulations to handle incompressibility constraints, block-solvers, thermo-elasticity, novel multifield formulations for plasticity and incompressible hyperelasticity, and the recent development on the first-order hyperbolic framework for fast-transient solid dynamics. Moreover, we will also provide hands-on training with MoFEM on the cloud platform on these topics.
+The objective of this online course is to present new advances in mixed finite element formulations in solid mechanics and novel techniques for modelling deformable solids at finite strains. The lectures are focused on both the mechanical and mathematical aspects.  The specific topics of this course include saddle point formulations to handle incompressibility constraints, block-solvers, thermo-elasticity, novel multifield formulations for plasticity and incompressible hyperelasticity, and the recent development of the first-order hyperbolic framework for fast-transient solid dynamics. Moreover, we will also provide hands-on training with MoFEM on the cloud platform on these topics.
 
 ## Programme
 
