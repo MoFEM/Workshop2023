@@ -4,28 +4,27 @@
 
 You can install Docker following instructions here [link](https://docs.docker.com/engine/install/).
 
-## Run container
+## How to run the container
 
-#### Pull image
+1. Pull image
 
 ~~~~
 docker pull likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~
 
-#### Run container
+2. Run container
 
-If you like, just try the container that after the shutdown of the JupyterHub container will be removed, run docker it as follows, 
+- If you like, just try the container that after the shutdown of the JupyterHub container will be removed, run docker it as follows, 
 ~~~~
 docker run --rm --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~
 
-#### Run demon 
-
-If you would like to switch it on for some time, we recommend running it as a demon,
+- If you would like to switch it on for some time, we recommend running it as a demon,
 ~~~~~
 docker run -d --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~~
-In case you run it on the laptop/server and shut down it, after reboot, you can restart the container as follows.
+
+- In case you run it on the laptop/server and shut down it, after reboot, you can restart the container as follows.
 ~~~~~
 docker start workshop2023
 ~~~~~
@@ -45,11 +44,19 @@ That results in suboptimal performance; however, it is a workable solution but c
 - If you run a container locally, [http://localhost:8000](http://localhost:8000)
 - If you install the Docker package into SSH you can attach directly to the running container as a *root* user.
 - You can log in using VSCode after installing the package RenonteSSH using SSH.
-- Also, you can SSH 
+- Also, you can SSH as follows
 ~~~~~
 ssh -p 2222 mofem@localhost
 ~~~~~
-The password is *123*; please change the password immediately after logging in. 
+
+> You must set a *mofem* user password before logging in using SSH. To do that, you can attach it to the container and set a password, as follows;
+~~~~
+docker exec -it workshop2023 /bin/bash
+~~~~
+> one you are in,
+~~~~
+passwd mofem 
+~~~~ 
 
 ## Password and login
 
