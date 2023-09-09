@@ -38,12 +38,34 @@ docker run -d --platform linux/amd64 --name workshop2023 -p 8000:8000 -p 2222:22
 ~~~~~~
 That results in suboptimal performance, however, is a workable solution.
 
-In theory, you can build your docker image from M1 chip. However, we do not test it and at that time we do not know if all packages will run. However, MoFEM compilation with Spack will work. 
+In theory, you can build your docker image from M1 chip. However, we do not test it and at that time, we do not know if all packages will run. However, MoFEM compilation with Spack will work. 
+
+## How to connect to container
+
+- If you run a container locally, [http://localhost:8000](http://localhost:8000)
+- If you install the Docker package into SSH you can attach directly to the running container as a *root* user.
+- You can log in using VSCode after installing the package RenonteSSH using SSH.
+- Also, you can SSH 
+~~~~~
+ssh -p 2222 mofem@localhost
+~~~~~
+The password is *123*; please change the password immediately after logging in. 
+
+## Password and login
+
+- On the first login, select the password. The login name is *mofem*. You have admin rights, and you can add more users.
+- The shell password on the SSH login is different than the JupyterHub password. Shell password is *123*.
+- Change password in the shell using [passwd](https://man7.org/linux/man-pages/man1/passwd.1.html){:target="_blank" rel="noopener"} command
+- Set up your shell with the command (e.g. bash):
+~~~~
+$ usermod --shell /bin/bash your_login_name
+~~~~
+You can use other shells, depending on your personal preferences.
 
 ## Login and starting work
 
 - Login as user "mofem"; you set a password on the first login. Note this is the password to JupyterHub, not a password to the Linux environment.
-- Before you start, execute *install.md* notebook. It will create a local view of the generic MoFEM installation, which is used by default in example notebooks.
+- Before you start, execute *install.md* notebook. It will create a local view of the generic MoFEM installation used by default in example notebooks.
 
 ## Being a good citizen
 
@@ -53,18 +75,6 @@ This is a case when the container is running on a server and you share resources
 ~~~~
 nice -n 10 mpirun -np 2 ./command_line
 ~~~~
-
-## Password and login
-
-- On the first login, select the password
-- The shell password on the SSH login is different than the JupyterHub password
-- Ask an admin for SSH password
-- Change password in the shell using [passwd](https://man7.org/linux/man-pages/man1/passwd.1.html){:target="_blank" rel="noopener"} command
-- Set up your shell with the command (e.g. bash):
-~~~~
-$ usermod --shell /bin/bash your_login_name
-~~~~
-You can use other shells, depending of your personal preferences.
 
 ## SSH config
 
@@ -78,7 +88,7 @@ Host workshop2023
   Port 2222
 ~~~~
 
-Use *workshop2023* when you login thorugh VSCode. Note that you are connecting to *jupyterhub cloud/docker container*.
+Use *workshop2023* when you log in through VSCode. Note that you are connecting to *jupyterhub cloud/docker container*.
 
 [![Watch the video](https://img.youtube.com/vi/xL3J8VHig68/hqdefault.jpg)](https://youtu.be/xL3J8VHig68){:target="_blank" rel="noopener"}
 
