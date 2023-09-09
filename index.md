@@ -80,6 +80,8 @@ Host workshop2023
 
 Use *workshop2023* when you login in VSCode. Note tha you are connecting to *jupyterhub cloud/docker container*.
 
+[![Watch the video](https://img.youtube.com/vi/xL3J8VHig68/hqdefault.jpg)](https://youtu.be/xL3J8VHig68){:target="_blank" rel="noopener"}
+
 ## Video on JuputerHub, SSH and MoFEM
 
 # Workshop 2023
@@ -93,7 +95,4 @@ The objective of this online course is to present new advances in mixed finite e
 ## Programme
 
 Link to programme [link](https://drive.google.com/file/d/17aD4O-mxYrhhLBaUtaC6G61ZZh1P1Dwy/view)
-
-
-[![Watch the video](https://img.youtube.com/vi/xL3J8VHig68/hqdefault.jpg)](https://youtu.be/xL3J8VHig68){:target="_blank" rel="noopener"}
 
