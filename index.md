@@ -7,23 +7,18 @@ You can install Docker following instructions here [link](https://docs.docker.co
 ## How to run the container
 
 1. Pull image
-
 ~~~~
 docker pull likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~
-
 2. Run container
-
 - If you like, just try the container that after the shutdown of the JupyterHub container will be removed, run docker it as follows, 
 ~~~~
 docker run --rm --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~
-
 - If you would like to switch it on for some time, we recommend running it as a demon,
 ~~~~~
 docker run -d --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~~
-
 - In case you run it on the laptop/server and shut down it, after reboot, you can restart the container as follows.
 ~~~~~
 docker start workshop2023
@@ -91,7 +86,7 @@ Host workshop2023
   HostName localhost
   ForwardX11 yes
   Compression yes
-  User YOUR_LOGIN_ON_HUB
+  User mofem
   Port 2222
 ~~~~
 
