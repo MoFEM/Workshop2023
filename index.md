@@ -90,9 +90,9 @@ Host workshop2023
 
 Use *workshop2023* when you log in through VSCode. Note that you are connecting to *jupyterhub cloud/docker container*.
 
-[![Watch the video](https://img.youtube.com/vi/xL3J8VHig68/hqdefault.jpg)](https://youtu.be/xL3J8VHig68){:target="_blank" rel="noopener"}
-
 ## Video on JuputerHub, SSH and MoFEM
+
+[![Watch the video](https://img.youtube.com/vi/xL3J8VHig68/hqdefault.jpg)](https://youtu.be/xL3J8VHig68){:target="_blank" rel="noopener"}
 
 # Workshop 2023
 
