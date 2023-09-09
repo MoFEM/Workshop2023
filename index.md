@@ -65,11 +65,11 @@ You can use other shells, depending on your personal preferences.
 ## Login and starting work
 
 - Login as user "mofem"; you set a password on the first login. Note this is the password to JupyterHub, not a password to the Linux environment.
-- Before you start, execute *install.md* notebook. It will create a local view of the generic MoFEM installation used by default in example notebooks.
+- **Important**. Before you start, execute *install.md* notebook. It will create a local view of the generic MoFEM installation used by default in example notebooks.
 
 ## Being a good citizen
 
-This is a case when the container is running on a server and you share resources with other users.
+This is a case when the container is running on a server, and you share resources with other users.
 
 - If you run something with multiprocess which will run longer than 5-10 minutes, be nice, i.e. run the command as follows
 ~~~~
