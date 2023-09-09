@@ -25,7 +25,7 @@ If you would like to switch it on for some time, we recommend running it as a de
 ~~~~~
 docker run -d --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~~
-In case you run it on the laptop and you shout it down, after reboot, you can restart the container as follows.
+In case you run it on the laptop/server and shut down it, after reboot, you can restart the container as follows.
 ~~~~~
 docker start workshop2023
 ~~~~~
@@ -36,11 +36,11 @@ If you have run a Mac with an ARM chip, you have to switch platforms when you ru
 ~~~~~~
 docker run -d --platform linux/amd64 --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~~~
-That results in suboptimal performance, however, is a workable solution.
+That results in suboptimal performance; however, it is a workable solution but could be faster. 
 
-In theory, you can build your docker image from M1 chip. However, we do not test it and at that time, we do not know if all packages will run. However, MoFEM compilation with Spack will work. 
+> The base system is Ubuntu 20.04. To compile code for *arm* architecture, we would have to upgrade the system to Ubuntu 22.04, and then it would be possible to compile MoFEM ecosystem for M1 chip. That is tested and works. However, additionally, you would have to compile gMesh from scratch. Python pip installation for gMesh and *arm* architectures is not available. If you know how to do it, we will welcome PR from you to fix this problem.
 
-## How to connect to container
+## How to connect to the container
 
 - If you run a container locally, [http://localhost:8000](http://localhost:8000)
 - If you install the Docker package into SSH you can attach directly to the running container as a *root* user.
