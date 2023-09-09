@@ -11,7 +11,7 @@ You can install Docker following instructions here [link](https://docs.docker.co
 docker pull likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~
 2. Run container
-- If you like, just try the container that after the shutdown of the JupyterHub container will be removed, run docker it as follows, 
+- If you like, just try the container that, after the shutdown of the JupyterHub container will be removed, run docker it as follows, 
 ~~~~
 docker run --rm --name workshop2023 -p 8000:8000 -p 2222:22 likask/mofem-spack-jupyterhub:Workshop2023
 ~~~~
@@ -44,7 +44,7 @@ That results in suboptimal performance; however, it is a workable solution but c
 ssh -p 2222 mofem@localhost
 ~~~~~
 
-> You must set a *mofem* user password before logging in using SSH. To do that, you can attach it to the container and set a password, as follows;
+> You must set a *mofem* user password before logging in using SSH. Change password in the shell using [passwd](https://man7.org/linux/man-pages/man1/passwd.1.html){:target="_blank" rel="noopener"} command. To do that, you can attach it to the container and set a password as follows;
 ~~~~
 docker exec -it workshop2023 /bin/bash
 ~~~~
@@ -56,8 +56,6 @@ passwd mofem
 ## Password and login
 
 - On the first login, select the password. The login name is *mofem*. You have admin rights, and you can add more users.
-- The shell password on the SSH login is different than the JupyterHub password. Shell password is *123*.
-- Change password in the shell using [passwd](https://man7.org/linux/man-pages/man1/passwd.1.html){:target="_blank" rel="noopener"} command
 - Set up your shell with the command (e.g. bash):
 ~~~~
 $ usermod --shell /bin/bash your_login_name
